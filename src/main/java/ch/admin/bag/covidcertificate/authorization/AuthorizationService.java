@@ -57,11 +57,12 @@ public interface AuthorizationService {
     /**
      * Returns a list of {@linkplain ch.admin.bag.covidcertificate.authorization.config.ServiceData.Function} that match given uri and http method.<p>
      * A single entry is a trustful identification, more or less than that indicates that the identification is NOT trustworthy.
+     * @param service identifies the current service
      * @param uri the uri the function has to match
      * @param httpMethod the http method the function has to match
      * @return List of {@linkplain ch.admin.bag.covidcertificate.authorization.config.ServiceData.Function} that match given uri and http method
      */
-    List<ServiceData.Function> identifyFunction(String uri, String httpMethod);
+    List<ServiceData.Function> identifyFunction(String service, String uri, String httpMethod);
 
     /**
      * Returns <code>true</code> for given function if the one-of setting contains the role needed
@@ -80,5 +81,4 @@ public interface AuthorizationService {
      * @return List with role names
      */
     Set<String> mapRawRoles(Collection<String> rawRoles);
-
 }

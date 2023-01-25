@@ -112,9 +112,9 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     }
 
     @Override
-    public List<ServiceData.Function> identifyFunction(String uri, String httpMethod) {
+    public List<ServiceData.Function> identifyFunction(String service, String uri, String httpMethod) {
 
-        List<ServiceData.Function> functions = getDefinition("management")
+        List<ServiceData.Function> functions = getDefinition(service)
                 .getFunctions()
                 .values()
                 .stream()

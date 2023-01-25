@@ -32,7 +32,7 @@ public class MockAuthorizationServiceImpl implements AuthorizationService {
     }
 
     @Override
-    public List<ServiceData.Function> identifyFunction(String uri, String httpMethod) {
+    public List<ServiceData.Function> identifyFunction(String service, String uri, String httpMethod) {
         return Arrays.asList(new ServiceData.Function());
     }
 

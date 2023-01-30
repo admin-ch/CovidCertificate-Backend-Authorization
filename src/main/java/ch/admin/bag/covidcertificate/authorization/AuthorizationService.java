@@ -3,11 +3,9 @@ package ch.admin.bag.covidcertificate.authorization;
 import ch.admin.bag.covidcertificate.authorization.config.RoleData;
 import ch.admin.bag.covidcertificate.authorization.config.ServiceData;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public interface AuthorizationService {
 

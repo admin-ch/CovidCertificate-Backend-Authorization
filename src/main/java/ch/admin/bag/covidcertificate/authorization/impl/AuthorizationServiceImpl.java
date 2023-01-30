@@ -1,8 +1,11 @@
 package ch.admin.bag.covidcertificate.authorization.impl;
 
+import ch.admin.bag.covidcertificate.authorization.AuthorizationConfig;
 import ch.admin.bag.covidcertificate.authorization.AuthorizationService;
 import ch.admin.bag.covidcertificate.authorization.ProfileRegistry;
-import ch.admin.bag.covidcertificate.authorization.config.*;
+import ch.admin.bag.covidcertificate.authorization.config.RoleConfig;
+import ch.admin.bag.covidcertificate.authorization.config.RoleData;
+import ch.admin.bag.covidcertificate.authorization.config.ServiceData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -14,14 +17,21 @@ import org.springframework.util.StringUtils;
 import javax.annotation.PostConstruct;
 import java.text.MessageFormat;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
-@Slf4j
-@Profile({"!"+ ProfileRegistry.AUTHORIZATION_MOCK, ProfileRegistry.AUTHORIZATION })
+@Profile(ProfileRegistry.AUTHORIZATION + " && !" + ProfileRegistry.AUTHORIZATION_MOCK)
 public class AuthorizationServiceImpl implements AuthorizationService {
 
     private final AuthorizationConfig authorizationConfig;

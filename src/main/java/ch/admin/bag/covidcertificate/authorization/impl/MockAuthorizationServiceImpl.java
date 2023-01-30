@@ -5,10 +5,16 @@ import ch.admin.bag.covidcertificate.authorization.ProfileRegistry;
 import ch.admin.bag.covidcertificate.authorization.config.RoleData;
 import ch.admin.bag.covidcertificate.authorization.config.ServiceData;
 import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 
-@Profile({ProfileRegistry.AUTHORIZATION_MOCK, ProfileRegistry.AUTHORIZATION })
+@Service
+@Profile(ProfileRegistry.AUTHORIZATION_MOCK + " && " + ProfileRegistry.AUTHORIZATION)
 public class MockAuthorizationServiceImpl implements AuthorizationService {
 
     @Override

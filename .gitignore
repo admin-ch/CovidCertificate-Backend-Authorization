@@ -1,0 +1,12 @@
+
+target/
+
+# IntelliJ
+.idea/*
+*.iws
+*.iml
+*.ipr
+
+# Logs
+*.log
+/log.log*

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-@Profile(ProfileRegistry.AUTHORIZATION_MOCK + " && " + ProfileRegistry.AUTHORIZATION)
+@Profile(ProfileRegistry.AUTHORIZATION_MOCK + " && !" + ProfileRegistry.AUTHORIZATION)
 public class MockAuthorizationServiceImpl implements AuthorizationService {
 
     @Override

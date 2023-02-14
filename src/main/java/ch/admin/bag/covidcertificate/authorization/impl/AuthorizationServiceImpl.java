@@ -27,7 +27,9 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
-
+/**
+ * The real implementation of AuthorizationService used if the profile AUTHORIZATION is active.
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -124,7 +126,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     @Override
     public List<ServiceData.Function> identifyFunction(String service, String uri, String httpMethod) {
 
-        List<ServiceData.Function> functions = getDefinition(service)
+        return getDefinition(service)
                 .getFunctions()
                 .values()
                 .stream()
@@ -133,8 +135,6 @@ public class AuthorizationServiceImpl implements AuthorizationService {
                 .filter(f -> f.matchesHttpMethod(httpMethod))
                 .filter(f -> f.isBetween(LocalDateTime.now()))
                 .toList();
-
-        return functions;
     }
 
     @Override

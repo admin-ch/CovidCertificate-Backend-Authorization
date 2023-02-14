@@ -13,6 +13,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
+/**
+ * Configured data object that contains all service and function mappings needed to operate the Covid Certificate
+ * Services. All entries have an identifier and a validity using the from / until attributes.
+ * There is also an uri that has to match the requested path of an endpoint in combination with its method.
+ * If a match got found the underlying roles configured as one of list define if the token holder gets access or not.
+ */
 @Data
 public class ServiceData {
 

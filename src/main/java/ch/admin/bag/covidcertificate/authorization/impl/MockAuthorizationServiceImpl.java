@@ -13,13 +13,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * The mock implementation of AuthorizationService used if the profile AUTHORIZATION_MOCK is active.
+ */
 @Service
 @Profile(ProfileRegistry.AUTHORIZATION_MOCK + " && !" + ProfileRegistry.AUTHORIZATION)
 public class MockAuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public Set<String> getCurrent(String service, List<String> rawRoles) {
-        return Collections.EMPTY_SET;
+        return Collections.emptySet();
     }
 
     @Override
@@ -29,7 +32,7 @@ public class MockAuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public List<RoleData> getRoleMapping() {
-        return Collections.EMPTY_LIST;
+        return Collections.emptyList();
     }
 
     @Override
@@ -49,6 +52,6 @@ public class MockAuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public Set<String> mapRawRoles(Collection<String> rawRoles) {
-        return Collections.EMPTY_SET;
+        return Collections.emptySet();
     }
 }

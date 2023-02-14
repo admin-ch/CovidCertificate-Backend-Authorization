@@ -1,9 +1,7 @@
 package ch.admin.bag.covidcertificate.authorization.impl;
 
-import ch.admin.bag.covidcertificate.authorization.AuthorizationService;
 import ch.admin.bag.covidcertificate.authorization.AuthorizationConfig;
-import ch.admin.bag.covidcertificate.authorization.config.LocalDateTimeConverter;
-import ch.admin.bag.covidcertificate.authorization.config.RoleConfig;
+import ch.admin.bag.covidcertificate.authorization.AuthorizationService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 
 @RunWith(SpringRunner.class)

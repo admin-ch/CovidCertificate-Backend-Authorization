@@ -6,7 +6,7 @@
 
     <groupId>ch.admin.bag.covidcertificate</groupId>
     <artifactId>cc-backend-authorization</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <url>https://github.com/admin-ch/CovidCertificate-Backend-Authorization</url>
 
     <licenses>

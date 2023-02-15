@@ -16,7 +16,7 @@ public class LocalDateTimeConverter implements Converter<String, LocalDateTime> 
 
     /**
      * Parses the given string named timestamp to a LocalDateTime object.
-     * It uses simply the parse method of the sam.
+     * It uses simply the parse method of the same.
      *
      * @param timestamp as string formatted as ISO_LOCAL_DATE_TIME
      * @return the LocalDateTime object or a runtime exception.

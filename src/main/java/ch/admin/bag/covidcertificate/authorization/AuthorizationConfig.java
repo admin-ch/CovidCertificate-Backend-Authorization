@@ -17,22 +17,22 @@ import org.springframework.context.annotation.Configuration;
 public class AuthorizationConfig {
 
     /**
-     * The service called Web UI that uses the management service to generate, revoke, covid certificates.
+     * The service called Web UI that uses the management service to generate and revoke covid certificates.
      */
     private ServiceData webUi;
 
     /**
-     * The API Gateway service that uses the management service to generate, revoke covid certificates.
+     * The API Gateway service that uses the management service to generate and revoke covid certificates.
      */
     private ServiceData apiGateway;
 
     /**
-     * The management service as central service to generate, revoke, print, sign covid certificates.
+     * The management service as central service to generate, revoke, print and sign covid certificates.
      */
     private ServiceData management;
 
     /**
-     * The report service that allows responsible people to get statistical data about the generated covid certificates.
+     * The report service that allows authorized users to get statistical data about the generated covid certificates.
      */
     private ServiceData report;
 
